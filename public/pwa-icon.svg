@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f43f5e"/>
+      <stop offset="50%" stop-color="#ec4899"/>
+      <stop offset="100%" stop-color="#8b5cf6"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#000000" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+  <rect width="512" height="512" rx="128" fill="url(#bg-grad)"/>
+  <!-- Dumbbell Icon with aesthetic glow -->
+  <g transform="translate(256, 256) rotate(-45) scale(1.3)" filter="url(#shadow)">
+    <!-- Dumbbell Bar -->
+    <rect x="-100" y="-12" width="200" height="24" rx="12" fill="#ffffff" opacity="0.95"/>
+    <!-- Left Weight Inner -->
+    <rect x="-70" y="-45" width="22" height="90" rx="9" fill="#ffffff"/>
+    <!-- Left Weight Outer -->
+    <rect x="-100" y="-35" width="20" height="70" rx="8" fill="#ffffff" opacity="0.85"/>
+    <!-- Right Weight Inner -->
+    <rect x="48" y="-45" width="22" height="90" rx="9" fill="#ffffff"/>
+    <!-- Right Weight Outer -->
+    <rect x="80" y="-35" width="20" height="70" rx="8" fill="#ffffff" opacity="0.85"/>
+  </g>
+  <!-- Mini sparkles -->
+  <path d="M140 130 Q140 160 170 160 Q140 160 140 190 Q140 160 110 160 Q140 160 140 130 Z" fill="#ffffff" opacity="0.85"/>
+  <path d="M370 340 Q370 365 395 365 Q370 365 370 390 Q370 365 345 365 Q370 365 370 340 Z" fill="#ffffff" opacity="0.85"/>
+</svg>

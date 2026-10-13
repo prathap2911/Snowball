@@ -1,0 +1,32 @@
+# React Single Page App & PWA .htaccess for cPanel (Apache)
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+
+  # 1. Force HTTPS (Required for PWA Service Workers to install on mobile)
+  RewriteCond %{HTTPS} off
+  RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+  # 2. Don't rewrite real files or directories
+  RewriteCond %{REQUEST_FILENAME} -f [OR]
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteRule ^ - [L]
+
+  # 3. Fallback to index.html for client-side routing
+  RewriteRule ^ index.html [L]
+</IfModule>
+
+# Caching and MIME Types
+<IfModule mod_headers.c>
+  # Service worker should not be cached aggressively
+  <FilesMatch "sw\.js$">
+    Header set Cache-Control "max-age=0, no-cache, no-store, must-revalidate"
+  </FilesMatch>
+</IfModule>
+
+<IfModule mod_mime.c>
+  AddType application/manifest+json .webmanifest .json
+  AddType application/javascript .js .mjs
+  AddType image/svg+xml .svg
+</IfModule>

@@ -1,0 +1,19 @@
+{
+  "name": "My 6-Day Workout Plan",
+  "short_name": "Workout",
+  "description": "A personal mobile-first 6-day workout planner and fitness companion",
+  "start_url": "./",
+  "id": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0f172a",
+  "theme_color": "#f43f5e",
+  "icons": [
+    {
+      "src": "pwa-icon.svg",
+      "sizes": "192x192 512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
