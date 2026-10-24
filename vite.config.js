@@ -4,7 +4,7 @@ import tailwindcss from '@tailwindcss/vite'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: './', // Ensures assets load properly on any cPanel path or subdomain
+  base: '/Snowball/', // Ensures assets load properly on any cPanel path or subdomain
   plugins: [
     react(),
     tailwindcss(),
